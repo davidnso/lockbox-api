@@ -11,6 +11,7 @@ const express = require("express");
 const bodyParser = __importStar(require("body-parser"));
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const expressRouteDriver_1 = require("./expressRouteDriver");
 class ExpressDriver {
     static build() {
         this.buildExpressDriver();
@@ -20,7 +21,9 @@ class ExpressDriver {
         this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.use(bodyParser.json());
         this.app.use(cors({ origin: true, credentials: true }));
+        this.app.set('trust proxy', true);
         this.app.use(cookieParser());
+        this.app.use(expressRouteDriver_1.ExpressRouteDriver.buildRoutes());
     }
 }
 exports.ExpressDriver = ExpressDriver;

@@ -11,7 +11,7 @@ const express_1 = require("express");
 const userHandlerFunctions = __importStar(require("../../user-module/Business-Logic"));
 const serviceHandler = __importStar(require("../../service-module/Business-logic/serviceHandler"));
 const buildingHandler = __importStar(require("../../building-module/business-logic/buildingHandler"));
-const logHandler = __importStar(require("../../logs-module/handlers/LogsHandler"));
+const logHandler = __importStar(require("../../logs-module/index"));
 const version = require("../../../package.json").version;
 class ExpressRouteDriver {
     static buildRoutes() {

@@ -1,0 +1,23 @@
+.taskCard { 
+     width: 85%;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(151, 151, 151, 0.25);
+    margin-top: 20px;
+    height: 130px; 
+    border-radius: 10px;}
+
+.taskCard button{
+    width: 178px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.taskCard .accept{
+    background-color: #508BFF;
+}
+.taskCard .decline{
+    background-color: #EC9D9D;
+    margin-left: 10px;
+}

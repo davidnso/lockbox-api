@@ -6,5 +6,6 @@ export {
   findGuests,
   updateUserStatus,
   login,
-  deleteGuestByName
+  deleteGuestByName,
+  updateUserAccessRights
 } from "./handlers/userHandler";

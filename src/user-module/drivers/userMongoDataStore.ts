@@ -133,6 +133,7 @@ export class UserMongoDataStore {
   }
   async updateUserStatus(params: { id: string; userUpdates: any }) {
     try {
+      console.log('in mongo')
       await this.userdb.updateOne(
         { _id: new ObjectId(params.id) },
         {$set:{ status: params.userUpdates.status }}
@@ -141,4 +142,17 @@ export class UserMongoDataStore {
       console.log("Mongo Error : ", err);
     }
   }
+
+  async updateUserAccessRights(params: {id:string; userUpdates: any}){
+    try{
+      console.log(params.userUpdates, params.id)
+      await this.userdb.updateOne(
+        {_id: new ObjectId(params.id)},
+        {$push: {accessRights: params.userUpdates}}
+      )
+    }catch(err){
+      throw new Error(err);
+    }
+  }
 }
+

@@ -140,6 +140,12 @@ export async function updateUserStatus({userUpdates, id}:{
   await dataStore.updateUserStatus({id,userUpdates});
 }
 
+export async function updateUserAccessRights({userUpdates, id}:{
+  userUpdates: any, id: string
+}){
+  await dataStore.updateUserAccessRights({id,userUpdates})
+}
+
 function mapGuestsToProperContract(guest: any){
      return {
        name: guest.name,

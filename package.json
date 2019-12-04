@@ -4,9 +4,9 @@
   "description": "Backend API for the Lockbox service including all modules necessary for the client application",
   "main": "src/app.ts",
   "scripts": {
-    "start": "node dist/app.js",
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "gulp"
   },
   "author": "David Nsoesie",
   "license": "ISC",
@@ -24,7 +24,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.1.10",
     "tslint": "^5.19.0",
-    "typescript": "^3.6.2",
+    "typescript": "^3.6.2"
+  },
+  "devDependencies": {
     "@types/express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-typescript": "^5.0.1",

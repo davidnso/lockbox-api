@@ -2,7 +2,7 @@ import { Router, Request, NextFunction } from "express";
 import * as userHandlerFunctions from "../../user-module/Business-Logic";
 import * as serviceHandler from "../../service-module/Business-logic/serviceHandler";
 import * as buildingHandler from "../../building-module/business-logic/buildingHandler";
-import * as logHandler from '../../logs-module/handlers/LogsHandler';
+import * as logHandler from '../../logs-module/index';
 import { Response } from "express-serve-static-core";
 import { loginRequest, User,ticketInfo } from "../../shared/entity";
 const version = require("../../../package.json").version;
